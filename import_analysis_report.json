@@ -1,0 +1,2935 @@
+{
+  "summary": {
+    "total_files": 30,
+    "parseable_files": 30,
+    "failed_files": 0,
+    "orchestrators_analyzed": [
+      "airflow",
+      "prefect",
+      "dagster"
+    ]
+  },
+  "top_missing_dependencies_global": [
+    {
+      "module": "requests",
+      "total_occurrences": 13
+    },
+    {
+      "module": "psycopg2",
+      "total_occurrences": 7
+    },
+    {
+      "module": "pandas",
+      "total_occurrences": 6
+    },
+    {
+      "module": "psycopg2.extras",
+      "total_occurrences": 4
+    },
+    {
+      "module": "redis",
+      "total_occurrences": 3
+    },
+    {
+      "module": "sqlalchemy",
+      "total_occurrences": 3
+    },
+    {
+      "module": "snowflake",
+      "total_occurrences": 1
+    },
+    {
+      "module": "snowflake.connector",
+      "total_occurrences": 1
+    }
+  ],
+  "by_orchestrator": {
+    "airflow": {
+      "orchestrator": "airflow",
+      "summary": {
+        "total_files": 10,
+        "parseable_files": 10,
+        "failed_files": 0,
+        "unique_modules": 27
+      },
+      "modules_by_category": {
+        "orchestrator": [
+          {
+            "module": "airflow.models",
+            "category": "orchestrator",
+            "occurrences": 14,
+            "file_count": 3,
+            "files": [
+              "479b03a95808.py",
+              "8fbc641630b5.py",
+              "c6fc35d4218b.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.models",
+                "is_from": true,
+                "imported_names": [
+                  "Variable"
+                ],
+                "file_path": "479b03a95808.py",
+                "line_number": 6
+              },
+              {
+                "module": "airflow.models",
+                "is_from": true,
+                "imported_names": [
+                  "Variable"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 15
+              },
+              {
+                "module": "airflow.models",
+                "is_from": true,
+                "imported_names": [
+                  "Variable"
+                ],
+                "file_path": "c6fc35d4218b.py",
+                "line_number": 3
+              },
+              {
+                "module": "airflow.models",
+                "is_from": true,
+                "imported_names": [
+                  "DagRun"
+                ],
+                "file_path": "c6fc35d4218b.py",
+                "line_number": 115
+              },
+              {
+                "module": "airflow.models",
+                "is_from": true,
+                "imported_names": [
+                  "TaskInstance"
+                ],
+                "file_path": "c6fc35d4218b.py",
+                "line_number": 123
+              }
+            ]
+          },
+          {
+            "module": "airflow",
+            "category": "orchestrator",
+            "occurrences": 13,
+            "file_count": 10,
+            "files": [
+              "12e395b53105.py",
+              "1f6d2990a35f.py",
+              "2c3227bce95f.py",
+              "479b03a95808.py",
+              "75db472a60e1.py",
+              "8fbc641630b5.py",
+              "c1e7662c1a30.py",
+              "c6fc35d4218b.py",
+              "cba80de84f17.py",
+              "f8462b3ea548.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow",
+                "is_from": true,
+                "imported_names": [
+                  "DAG"
+                ],
+                "file_path": "12e395b53105.py",
+                "line_number": 1
+              },
+              {
+                "module": "airflow",
+                "is_from": true,
+                "imported_names": [
+                  "DAG"
+                ],
+                "file_path": "1f6d2990a35f.py",
+                "line_number": 1
+              },
+              {
+                "module": "airflow",
+                "is_from": true,
+                "imported_names": [
+                  "DAG"
+                ],
+                "file_path": "2c3227bce95f.py",
+                "line_number": 2
+              },
+              {
+                "module": "airflow",
+                "is_from": true,
+                "imported_names": [
+                  "DAG"
+                ],
+                "file_path": "479b03a95808.py",
+                "line_number": 1
+              },
+              {
+                "module": "airflow",
+                "is_from": true,
+                "imported_names": [
+                  "DAG"
+                ],
+                "file_path": "75db472a60e1.py",
+                "line_number": 1
+              }
+            ]
+          },
+          {
+            "module": "airflow.operators.python",
+            "category": "orchestrator",
+            "occurrences": 9,
+            "file_count": 9,
+            "files": [
+              "12e395b53105.py",
+              "1f6d2990a35f.py",
+              "479b03a95808.py",
+              "75db472a60e1.py",
+              "8fbc641630b5.py",
+              "c1e7662c1a30.py",
+              "c6fc35d4218b.py",
+              "cba80de84f17.py",
+              "f8462b3ea548.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.operators.python",
+                "is_from": true,
+                "imported_names": [
+                  "PythonOperator"
+                ],
+                "file_path": "12e395b53105.py",
+                "line_number": 2
+              },
+              {
+                "module": "airflow.operators.python",
+                "is_from": true,
+                "imported_names": [
+                  "PythonOperator"
+                ],
+                "file_path": "1f6d2990a35f.py",
+                "line_number": 3
+              },
+              {
+                "module": "airflow.operators.python",
+                "is_from": true,
+                "imported_names": [
+                  "PythonOperator"
+                ],
+                "file_path": "479b03a95808.py",
+                "line_number": 2
+              },
+              {
+                "module": "airflow.operators.python",
+                "is_from": true,
+                "imported_names": [
+                  "PythonOperator",
+                  "BranchPythonOperator"
+                ],
+                "file_path": "75db472a60e1.py",
+                "line_number": 2
+              },
+              {
+                "module": "airflow.operators.python",
+                "is_from": true,
+                "imported_names": [
+                  "PythonOperator"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 11
+              }
+            ]
+          },
+          {
+            "module": "airflow.utils.dates",
+            "category": "orchestrator",
+            "occurrences": 4,
+            "file_count": 4,
+            "files": [
+              "12e395b53105.py",
+              "479b03a95808.py",
+              "75db472a60e1.py",
+              "c6fc35d4218b.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.utils.dates",
+                "is_from": true,
+                "imported_names": [
+                  "days_ago"
+                ],
+                "file_path": "12e395b53105.py",
+                "line_number": 3
+              },
+              {
+                "module": "airflow.utils.dates",
+                "is_from": true,
+                "imported_names": [
+                  "days_ago"
+                ],
+                "file_path": "479b03a95808.py",
+                "line_number": 5
+              },
+              {
+                "module": "airflow.utils.dates",
+                "is_from": true,
+                "imported_names": [
+                  "days_ago"
+                ],
+                "file_path": "75db472a60e1.py",
+                "line_number": 3
+              },
+              {
+                "module": "airflow.utils.dates",
+                "is_from": true,
+                "imported_names": [
+                  "days_ago"
+                ],
+                "file_path": "c6fc35d4218b.py",
+                "line_number": 5
+              }
+            ]
+          },
+          {
+            "module": "airflow.hooks.postgres_hook",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "12e395b53105.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.hooks.postgres_hook",
+                "is_from": true,
+                "imported_names": [
+                  "PostgresHook"
+                ],
+                "file_path": "12e395b53105.py",
+                "line_number": 8
+              }
+            ]
+          },
+          {
+            "module": "airflow.sensors.filesystem",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "1f6d2990a35f.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.sensors.filesystem",
+                "is_from": true,
+                "imported_names": [
+                  "FileSensor"
+                ],
+                "file_path": "1f6d2990a35f.py",
+                "line_number": 2
+              }
+            ]
+          },
+          {
+            "module": "airflow.providers.ftp.hooks.ftp",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "1f6d2990a35f.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.providers.ftp.hooks.ftp",
+                "is_from": true,
+                "imported_names": [
+                  "FTPHook"
+                ],
+                "file_path": "1f6d2990a35f.py",
+                "line_number": 4
+              }
+            ]
+          },
+          {
+            "module": "airflow.providers.snowflake.operators.snowflake",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "2c3227bce95f.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.providers.snowflake.operators.snowflake",
+                "is_from": true,
+                "imported_names": [
+                  "SnowflakeOperator"
+                ],
+                "file_path": "2c3227bce95f.py",
+                "line_number": 3
+              }
+            ]
+          },
+          {
+            "module": "airflow.providers.slack.operators.slack_webhook",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "2c3227bce95f.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.providers.slack.operators.slack_webhook",
+                "is_from": true,
+                "imported_names": [
+                  "SlackWebhookOperator"
+                ],
+                "file_path": "2c3227bce95f.py",
+                "line_number": 4
+              }
+            ]
+          },
+          {
+            "module": "airflow.operators.http",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "479b03a95808.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.operators.http",
+                "is_from": true,
+                "imported_names": [
+                  "HttpOperator"
+                ],
+                "file_path": "479b03a95808.py",
+                "line_number": 3
+              }
+            ]
+          },
+          {
+            "module": "airflow.providers.postgres.operators.postgres",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "479b03a95808.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.providers.postgres.operators.postgres",
+                "is_from": true,
+                "imported_names": [
+                  "PostgresOperator"
+                ],
+                "file_path": "479b03a95808.py",
+                "line_number": 4
+              }
+            ]
+          },
+          {
+            "module": "airflow.operators.bash",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "8fbc641630b5.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.operators.bash",
+                "is_from": true,
+                "imported_names": [
+                  "BashOperator"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 10
+              }
+            ]
+          },
+          {
+            "module": "airflow.operators.postgres_operator",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "8fbc641630b5.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.operators.postgres_operator",
+                "is_from": true,
+                "imported_names": [
+                  "PostgresOperator"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 12
+              }
+            ]
+          },
+          {
+            "module": "airflow.operators.branch",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "8fbc641630b5.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.operators.branch",
+                "is_from": true,
+                "imported_names": [
+                  "BranchPythonOperator"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 13
+              }
+            ]
+          },
+          {
+            "module": "airflow.utils.task_group",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "8fbc641630b5.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.utils.task_group",
+                "is_from": true,
+                "imported_names": [
+                  "TaskGroup"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 14
+              }
+            ]
+          },
+          {
+            "module": "airflow.sensors.external_task",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "cba80de84f17.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "airflow.sensors.external_task",
+                "is_from": true,
+                "imported_names": [
+                  "ExternalTaskSensor"
+                ],
+                "file_path": "cba80de84f17.py",
+                "line_number": 4
+              }
+            ]
+          }
+        ],
+        "stdlib": [
+          {
+            "module": "datetime",
+            "category": "stdlib",
+            "occurrences": 9,
+            "file_count": 9,
+            "files": [
+              "12e395b53105.py",
+              "1f6d2990a35f.py",
+              "2c3227bce95f.py",
+              "75db472a60e1.py",
+              "8fbc641630b5.py",
+              "c1e7662c1a30.py",
+              "c6fc35d4218b.py",
+              "cba80de84f17.py",
+              "f8462b3ea548.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "datetime",
+                "is_from": true,
+                "imported_names": [
+                  "timedelta"
+                ],
+                "file_path": "12e395b53105.py",
+                "line_number": 4
+              },
+              {
+                "module": "datetime",
+                "is_from": true,
+                "imported_names": [
+                  "datetime",
+                  "timedelta"
+                ],
+                "file_path": "1f6d2990a35f.py",
+                "line_number": 5
+              },
+              {
+                "module": "datetime",
+                "is_from": true,
+                "imported_names": [
+                  "datetime"
+                ],
+                "file_path": "2c3227bce95f.py",
+                "line_number": 1
+              },
+              {
+                "module": "datetime",
+                "is_from": true,
+                "imported_names": [
+                  "timedelta"
+                ],
+                "file_path": "75db472a60e1.py",
+                "line_number": 4
+              },
+              {
+                "module": "datetime",
+                "is_from": true,
+                "imported_names": [
+                  "datetime",
+                  "timedelta"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 6
+              }
+            ]
+          },
+          {
+            "module": "os",
+            "category": "stdlib",
+            "occurrences": 4,
+            "file_count": 4,
+            "files": [
+              "12e395b53105.py",
+              "1f6d2990a35f.py",
+              "8fbc641630b5.py",
+              "cba80de84f17.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "12e395b53105.py",
+                "line_number": 7
+              },
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "1f6d2990a35f.py",
+                "line_number": 7
+              },
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 1
+              },
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "cba80de84f17.py",
+                "line_number": 7
+              }
+            ]
+          },
+          {
+            "module": "csv",
+            "category": "stdlib",
+            "occurrences": 4,
+            "file_count": 4,
+            "files": [
+              "75db472a60e1.py",
+              "8fbc641630b5.py",
+              "c1e7662c1a30.py",
+              "f8462b3ea548.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "csv",
+                "is_from": false,
+                "imported_names": [
+                  "csv"
+                ],
+                "file_path": "75db472a60e1.py",
+                "line_number": 5
+              },
+              {
+                "module": "csv",
+                "is_from": false,
+                "imported_names": [
+                  "csv"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 5
+              },
+              {
+                "module": "csv",
+                "is_from": false,
+                "imported_names": [
+                  "csv"
+                ],
+                "file_path": "c1e7662c1a30.py",
+                "line_number": 74
+              },
+              {
+                "module": "csv",
+                "is_from": false,
+                "imported_names": [
+                  "csv"
+                ],
+                "file_path": "f8462b3ea548.py",
+                "line_number": 4
+              }
+            ]
+          },
+          {
+            "module": "logging",
+            "category": "stdlib",
+            "occurrences": 4,
+            "file_count": 4,
+            "files": [
+              "75db472a60e1.py",
+              "c6fc35d4218b.py",
+              "cba80de84f17.py",
+              "f8462b3ea548.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "logging",
+                "is_from": false,
+                "imported_names": [
+                  "logging"
+                ],
+                "file_path": "75db472a60e1.py",
+                "line_number": 7
+              },
+              {
+                "module": "logging",
+                "is_from": false,
+                "imported_names": [
+                  "logging"
+                ],
+                "file_path": "c6fc35d4218b.py",
+                "line_number": 7
+              },
+              {
+                "module": "logging",
+                "is_from": false,
+                "imported_names": [
+                  "logging"
+                ],
+                "file_path": "cba80de84f17.py",
+                "line_number": 6
+              },
+              {
+                "module": "logging",
+                "is_from": false,
+                "imported_names": [
+                  "logging"
+                ],
+                "file_path": "f8462b3ea548.py",
+                "line_number": 5
+              }
+            ]
+          },
+          {
+            "module": "json",
+            "category": "stdlib",
+            "occurrences": 3,
+            "file_count": 3,
+            "files": [
+              "12e395b53105.py",
+              "479b03a95808.py",
+              "8fbc641630b5.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "json",
+                "is_from": false,
+                "imported_names": [
+                  "json"
+                ],
+                "file_path": "12e395b53105.py",
+                "line_number": 6
+              },
+              {
+                "module": "json",
+                "is_from": false,
+                "imported_names": [
+                  "json"
+                ],
+                "file_path": "479b03a95808.py",
+                "line_number": 7
+              },
+              {
+                "module": "json",
+                "is_from": false,
+                "imported_names": [
+                  "json"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 2
+              }
+            ]
+          },
+          {
+            "module": "configparser",
+            "category": "stdlib",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "12e395b53105.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "configparser",
+                "is_from": false,
+                "imported_names": [
+                  "configparser"
+                ],
+                "file_path": "12e395b53105.py",
+                "line_number": 12
+              }
+            ]
+          },
+          {
+            "module": "typing",
+            "category": "stdlib",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "8fbc641630b5.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "typing",
+                "is_from": true,
+                "imported_names": [
+                  "Dict",
+                  "List",
+                  "Any",
+                  "Optional"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 7
+              }
+            ]
+          }
+        ],
+        "common": [
+          {
+            "module": "requests",
+            "category": "common",
+            "occurrences": 4,
+            "file_count": 4,
+            "files": [
+              "12e395b53105.py",
+              "479b03a95808.py",
+              "75db472a60e1.py",
+              "8fbc641630b5.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "12e395b53105.py",
+                "line_number": 5
+              },
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "479b03a95808.py",
+                "line_number": 8
+              },
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "75db472a60e1.py",
+                "line_number": 6
+              },
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 3
+              }
+            ]
+          },
+          {
+            "module": "sqlalchemy",
+            "category": "common",
+            "occurrences": 3,
+            "file_count": 1,
+            "files": [
+              "c6fc35d4218b.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "sqlalchemy",
+                "is_from": true,
+                "imported_names": [
+                  "func"
+                ],
+                "file_path": "c6fc35d4218b.py",
+                "line_number": 6
+              },
+              {
+                "module": "sqlalchemy",
+                "is_from": true,
+                "imported_names": [
+                  "text"
+                ],
+                "file_path": "c6fc35d4218b.py",
+                "line_number": 185
+              },
+              {
+                "module": "sqlalchemy",
+                "is_from": true,
+                "imported_names": [
+                  "text"
+                ],
+                "file_path": "c6fc35d4218b.py",
+                "line_number": 206
+              }
+            ]
+          },
+          {
+            "module": "pandas",
+            "category": "common",
+            "occurrences": 2,
+            "file_count": 2,
+            "files": [
+              "1f6d2990a35f.py",
+              "cba80de84f17.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "pandas",
+                "is_from": false,
+                "imported_names": [
+                  "pd"
+                ],
+                "file_path": "1f6d2990a35f.py",
+                "line_number": 6
+              },
+              {
+                "module": "pandas",
+                "is_from": false,
+                "imported_names": [
+                  "pd"
+                ],
+                "file_path": "cba80de84f17.py",
+                "line_number": 5
+              }
+            ]
+          },
+          {
+            "module": "redis",
+            "category": "common",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "8fbc641630b5.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "redis",
+                "is_from": false,
+                "imported_names": [
+                  "redis"
+                ],
+                "file_path": "8fbc641630b5.py",
+                "line_number": 4
+              }
+            ]
+          }
+        ]
+      },
+      "top_missing_dependencies": [
+        {
+          "module": "requests",
+          "category": "common",
+          "occurrences": 4,
+          "file_count": 4,
+          "files": [
+            "12e395b53105.py",
+            "479b03a95808.py",
+            "75db472a60e1.py",
+            "8fbc641630b5.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "12e395b53105.py",
+              "line_number": 5
+            },
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "479b03a95808.py",
+              "line_number": 8
+            },
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "75db472a60e1.py",
+              "line_number": 6
+            },
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "8fbc641630b5.py",
+              "line_number": 3
+            }
+          ]
+        },
+        {
+          "module": "sqlalchemy",
+          "category": "common",
+          "occurrences": 3,
+          "file_count": 1,
+          "files": [
+            "c6fc35d4218b.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "sqlalchemy",
+              "is_from": true,
+              "imported_names": [
+                "func"
+              ],
+              "file_path": "c6fc35d4218b.py",
+              "line_number": 6
+            },
+            {
+              "module": "sqlalchemy",
+              "is_from": true,
+              "imported_names": [
+                "text"
+              ],
+              "file_path": "c6fc35d4218b.py",
+              "line_number": 185
+            },
+            {
+              "module": "sqlalchemy",
+              "is_from": true,
+              "imported_names": [
+                "text"
+              ],
+              "file_path": "c6fc35d4218b.py",
+              "line_number": 206
+            }
+          ]
+        },
+        {
+          "module": "pandas",
+          "category": "common",
+          "occurrences": 2,
+          "file_count": 2,
+          "files": [
+            "1f6d2990a35f.py",
+            "cba80de84f17.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "pandas",
+              "is_from": false,
+              "imported_names": [
+                "pd"
+              ],
+              "file_path": "1f6d2990a35f.py",
+              "line_number": 6
+            },
+            {
+              "module": "pandas",
+              "is_from": false,
+              "imported_names": [
+                "pd"
+              ],
+              "file_path": "cba80de84f17.py",
+              "line_number": 5
+            }
+          ]
+        },
+        {
+          "module": "redis",
+          "category": "common",
+          "occurrences": 1,
+          "file_count": 1,
+          "files": [
+            "8fbc641630b5.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "redis",
+              "is_from": false,
+              "imported_names": [
+                "redis"
+              ],
+              "file_path": "8fbc641630b5.py",
+              "line_number": 4
+            }
+          ]
+        }
+      ]
+    },
+    "prefect": {
+      "orchestrator": "prefect",
+      "summary": {
+        "total_files": 10,
+        "parseable_files": 10,
+        "failed_files": 0,
+        "unique_modules": 18
+      },
+      "modules_by_category": {
+        "orchestrator": [
+          {
+            "module": "prefect",
+            "category": "orchestrator",
+            "occurrences": 10,
+            "file_count": 10,
+            "files": [
+              "1489683e8a6d.py",
+              "2915a1788e0d.py",
+              "6b9feef70feb.py",
+              "7c0a02a15fa8.py",
+              "c4ad891fb732.py",
+              "cefcfcb2f627.py",
+              "d58a2ac43a04.py",
+              "e6130582424e.py",
+              "f5c0edcc6aeb.py",
+              "f8091172fcf7.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "prefect",
+                "is_from": true,
+                "imported_names": [
+                  "flow",
+                  "task"
+                ],
+                "file_path": "1489683e8a6d.py",
+                "line_number": 1
+              },
+              {
+                "module": "prefect",
+                "is_from": true,
+                "imported_names": [
+                  "flow",
+                  "task",
+                  "get_run_logger"
+                ],
+                "file_path": "2915a1788e0d.py",
+                "line_number": 4
+              },
+              {
+                "module": "prefect",
+                "is_from": true,
+                "imported_names": [
+                  "flow",
+                  "task"
+                ],
+                "file_path": "6b9feef70feb.py",
+                "line_number": 6
+              },
+              {
+                "module": "prefect",
+                "is_from": true,
+                "imported_names": [
+                  "flow",
+                  "task"
+                ],
+                "file_path": "7c0a02a15fa8.py",
+                "line_number": 8
+              },
+              {
+                "module": "prefect",
+                "is_from": true,
+                "imported_names": [
+                  "flow",
+                  "task"
+                ],
+                "file_path": "c4ad891fb732.py",
+                "line_number": 1
+              }
+            ]
+          },
+          {
+            "module": "prefect.blocks.system",
+            "category": "orchestrator",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "1489683e8a6d.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "prefect.blocks.system",
+                "is_from": true,
+                "imported_names": [
+                  "Secret"
+                ],
+                "file_path": "1489683e8a6d.py",
+                "line_number": 11
+              }
+            ]
+          }
+        ],
+        "stdlib": [
+          {
+            "module": "typing",
+            "category": "stdlib",
+            "occurrences": 7,
+            "file_count": 7,
+            "files": [
+              "1489683e8a6d.py",
+              "6b9feef70feb.py",
+              "c4ad891fb732.py",
+              "cefcfcb2f627.py",
+              "d58a2ac43a04.py",
+              "e6130582424e.py",
+              "f8091172fcf7.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "typing",
+                "is_from": true,
+                "imported_names": [
+                  "List",
+                  "Dict",
+                  "Any"
+                ],
+                "file_path": "1489683e8a6d.py",
+                "line_number": 9
+              },
+              {
+                "module": "typing",
+                "is_from": true,
+                "imported_names": [
+                  "Optional"
+                ],
+                "file_path": "6b9feef70feb.py",
+                "line_number": 5
+              },
+              {
+                "module": "typing",
+                "is_from": true,
+                "imported_names": [
+                  "Dict",
+                  "Any"
+                ],
+                "file_path": "c4ad891fb732.py",
+                "line_number": 5
+              },
+              {
+                "module": "typing",
+                "is_from": true,
+                "imported_names": [
+                  "List",
+                  "Dict"
+                ],
+                "file_path": "cefcfcb2f627.py",
+                "line_number": 2
+              },
+              {
+                "module": "typing",
+                "is_from": true,
+                "imported_names": [
+                  "Dict",
+                  "Any",
+                  "Tuple"
+                ],
+                "file_path": "d58a2ac43a04.py",
+                "line_number": 4
+              }
+            ]
+          },
+          {
+            "module": "os",
+            "category": "stdlib",
+            "occurrences": 5,
+            "file_count": 5,
+            "files": [
+              "1489683e8a6d.py",
+              "2915a1788e0d.py",
+              "6b9feef70feb.py",
+              "c4ad891fb732.py",
+              "f8091172fcf7.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "1489683e8a6d.py",
+                "line_number": 5
+              },
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "2915a1788e0d.py",
+                "line_number": 1
+              },
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "6b9feef70feb.py",
+                "line_number": 2
+              },
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "c4ad891fb732.py",
+                "line_number": 4
+              },
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "f8091172fcf7.py",
+                "line_number": 4
+              }
+            ]
+          },
+          {
+            "module": "csv",
+            "category": "stdlib",
+            "occurrences": 4,
+            "file_count": 4,
+            "files": [
+              "6b9feef70feb.py",
+              "c4ad891fb732.py",
+              "cefcfcb2f627.py",
+              "f8091172fcf7.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "csv",
+                "is_from": false,
+                "imported_names": [
+                  "csv"
+                ],
+                "file_path": "6b9feef70feb.py",
+                "line_number": 3
+              },
+              {
+                "module": "csv",
+                "is_from": false,
+                "imported_names": [
+                  "csv"
+                ],
+                "file_path": "c4ad891fb732.py",
+                "line_number": 3
+              },
+              {
+                "module": "csv",
+                "is_from": false,
+                "imported_names": [
+                  "csv"
+                ],
+                "file_path": "cefcfcb2f627.py",
+                "line_number": 1
+              },
+              {
+                "module": "csv",
+                "is_from": false,
+                "imported_names": [
+                  "csv"
+                ],
+                "file_path": "f8091172fcf7.py",
+                "line_number": 3
+              }
+            ]
+          },
+          {
+            "module": "datetime",
+            "category": "stdlib",
+            "occurrences": 4,
+            "file_count": 4,
+            "files": [
+              "6b9feef70feb.py",
+              "7c0a02a15fa8.py",
+              "e6130582424e.py",
+              "f5c0edcc6aeb.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "datetime",
+                "is_from": true,
+                "imported_names": [
+                  "datetime"
+                ],
+                "file_path": "6b9feef70feb.py",
+                "line_number": 4
+              },
+              {
+                "module": "datetime",
+                "is_from": true,
+                "imported_names": [
+                  "datetime"
+                ],
+                "file_path": "7c0a02a15fa8.py",
+                "line_number": 4
+              },
+              {
+                "module": "datetime",
+                "is_from": false,
+                "imported_names": [
+                  "datetime"
+                ],
+                "file_path": "e6130582424e.py",
+                "line_number": 3
+              },
+              {
+                "module": "datetime",
+                "is_from": true,
+                "imported_names": [
+                  "datetime"
+                ],
+                "file_path": "f5c0edcc6aeb.py",
+                "line_number": 1
+              }
+            ]
+          },
+          {
+            "module": "time",
+            "category": "stdlib",
+            "occurrences": 3,
+            "file_count": 3,
+            "files": [
+              "1489683e8a6d.py",
+              "6b9feef70feb.py",
+              "c4ad891fb732.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "time",
+                "is_from": false,
+                "imported_names": [
+                  "time"
+                ],
+                "file_path": "1489683e8a6d.py",
+                "line_number": 6
+              },
+              {
+                "module": "time",
+                "is_from": false,
+                "imported_names": [
+                  "time"
+                ],
+                "file_path": "6b9feef70feb.py",
+                "line_number": 1
+              },
+              {
+                "module": "time",
+                "is_from": false,
+                "imported_names": [
+                  "time"
+                ],
+                "file_path": "c4ad891fb732.py",
+                "line_number": 2
+              }
+            ]
+          },
+          {
+            "module": "json",
+            "category": "stdlib",
+            "occurrences": 2,
+            "file_count": 2,
+            "files": [
+              "1489683e8a6d.py",
+              "7c0a02a15fa8.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "json",
+                "is_from": false,
+                "imported_names": [
+                  "json"
+                ],
+                "file_path": "1489683e8a6d.py",
+                "line_number": 4
+              },
+              {
+                "module": "json",
+                "is_from": false,
+                "imported_names": [
+                  "json"
+                ],
+                "file_path": "7c0a02a15fa8.py",
+                "line_number": 1
+              }
+            ]
+          },
+          {
+            "module": "subprocess",
+            "category": "stdlib",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "1489683e8a6d.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "subprocess",
+                "is_from": false,
+                "imported_names": [
+                  "subprocess"
+                ],
+                "file_path": "1489683e8a6d.py",
+                "line_number": 2
+              }
+            ]
+          },
+          {
+            "module": "ftplib",
+            "category": "stdlib",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "6b9feef70feb.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "ftplib",
+                "is_from": false,
+                "imported_names": [
+                  "ftplib"
+                ],
+                "file_path": "6b9feef70feb.py",
+                "line_number": 7
+              }
+            ]
+          },
+          {
+            "module": "configparser",
+            "category": "stdlib",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "7c0a02a15fa8.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "configparser",
+                "is_from": false,
+                "imported_names": [
+                  "configparser"
+                ],
+                "file_path": "7c0a02a15fa8.py",
+                "line_number": 3
+              }
+            ]
+          },
+          {
+            "module": "logging",
+            "category": "stdlib",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "e6130582424e.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "logging",
+                "is_from": false,
+                "imported_names": [
+                  "logging"
+                ],
+                "file_path": "e6130582424e.py",
+                "line_number": 4
+              }
+            ]
+          }
+        ],
+        "common": [
+          {
+            "module": "requests",
+            "category": "common",
+            "occurrences": 4,
+            "file_count": 4,
+            "files": [
+              "1489683e8a6d.py",
+              "2915a1788e0d.py",
+              "7c0a02a15fa8.py",
+              "d58a2ac43a04.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "1489683e8a6d.py",
+                "line_number": 3
+              },
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "2915a1788e0d.py",
+                "line_number": 2
+              },
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "7c0a02a15fa8.py",
+                "line_number": 2
+              },
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "d58a2ac43a04.py",
+                "line_number": 1
+              }
+            ]
+          },
+          {
+            "module": "psycopg2",
+            "category": "common",
+            "occurrences": 4,
+            "file_count": 4,
+            "files": [
+              "1489683e8a6d.py",
+              "6b9feef70feb.py",
+              "7c0a02a15fa8.py",
+              "d58a2ac43a04.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "psycopg2",
+                "is_from": false,
+                "imported_names": [
+                  "psycopg2"
+                ],
+                "file_path": "1489683e8a6d.py",
+                "line_number": 10
+              },
+              {
+                "module": "psycopg2",
+                "is_from": false,
+                "imported_names": [
+                  "psycopg2"
+                ],
+                "file_path": "6b9feef70feb.py",
+                "line_number": 8
+              },
+              {
+                "module": "psycopg2",
+                "is_from": false,
+                "imported_names": [
+                  "psycopg2"
+                ],
+                "file_path": "7c0a02a15fa8.py",
+                "line_number": 5
+              },
+              {
+                "module": "psycopg2",
+                "is_from": false,
+                "imported_names": [
+                  "psycopg2"
+                ],
+                "file_path": "d58a2ac43a04.py",
+                "line_number": 2
+              }
+            ]
+          },
+          {
+            "module": "psycopg2.extras",
+            "category": "common",
+            "occurrences": 2,
+            "file_count": 2,
+            "files": [
+              "6b9feef70feb.py",
+              "7c0a02a15fa8.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "psycopg2.extras",
+                "is_from": true,
+                "imported_names": [
+                  "RealDictCursor"
+                ],
+                "file_path": "6b9feef70feb.py",
+                "line_number": 9
+              },
+              {
+                "module": "psycopg2.extras",
+                "is_from": true,
+                "imported_names": [
+                  "execute_values"
+                ],
+                "file_path": "7c0a02a15fa8.py",
+                "line_number": 6
+              }
+            ]
+          },
+          {
+            "module": "redis",
+            "category": "common",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "1489683e8a6d.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "redis",
+                "is_from": false,
+                "imported_names": [
+                  "redis"
+                ],
+                "file_path": "1489683e8a6d.py",
+                "line_number": 7
+              }
+            ]
+          },
+          {
+            "module": "pandas",
+            "category": "common",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "1489683e8a6d.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "pandas",
+                "is_from": false,
+                "imported_names": [
+                  "pd"
+                ],
+                "file_path": "1489683e8a6d.py",
+                "line_number": 8
+              }
+            ]
+          }
+        ],
+        "unknown": [
+          {
+            "module": "snowflake",
+            "category": "unknown",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "2915a1788e0d.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "snowflake",
+                "is_from": true,
+                "imported_names": [
+                  "connector"
+                ],
+                "file_path": "2915a1788e0d.py",
+                "line_number": 3
+              }
+            ]
+          }
+        ]
+      },
+      "top_missing_dependencies": [
+        {
+          "module": "requests",
+          "category": "common",
+          "occurrences": 4,
+          "file_count": 4,
+          "files": [
+            "1489683e8a6d.py",
+            "2915a1788e0d.py",
+            "7c0a02a15fa8.py",
+            "d58a2ac43a04.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "1489683e8a6d.py",
+              "line_number": 3
+            },
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "2915a1788e0d.py",
+              "line_number": 2
+            },
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "7c0a02a15fa8.py",
+              "line_number": 2
+            },
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "d58a2ac43a04.py",
+              "line_number": 1
+            }
+          ]
+        },
+        {
+          "module": "psycopg2",
+          "category": "common",
+          "occurrences": 4,
+          "file_count": 4,
+          "files": [
+            "1489683e8a6d.py",
+            "6b9feef70feb.py",
+            "7c0a02a15fa8.py",
+            "d58a2ac43a04.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "psycopg2",
+              "is_from": false,
+              "imported_names": [
+                "psycopg2"
+              ],
+              "file_path": "1489683e8a6d.py",
+              "line_number": 10
+            },
+            {
+              "module": "psycopg2",
+              "is_from": false,
+              "imported_names": [
+                "psycopg2"
+              ],
+              "file_path": "6b9feef70feb.py",
+              "line_number": 8
+            },
+            {
+              "module": "psycopg2",
+              "is_from": false,
+              "imported_names": [
+                "psycopg2"
+              ],
+              "file_path": "7c0a02a15fa8.py",
+              "line_number": 5
+            },
+            {
+              "module": "psycopg2",
+              "is_from": false,
+              "imported_names": [
+                "psycopg2"
+              ],
+              "file_path": "d58a2ac43a04.py",
+              "line_number": 2
+            }
+          ]
+        },
+        {
+          "module": "psycopg2.extras",
+          "category": "common",
+          "occurrences": 2,
+          "file_count": 2,
+          "files": [
+            "6b9feef70feb.py",
+            "7c0a02a15fa8.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "psycopg2.extras",
+              "is_from": true,
+              "imported_names": [
+                "RealDictCursor"
+              ],
+              "file_path": "6b9feef70feb.py",
+              "line_number": 9
+            },
+            {
+              "module": "psycopg2.extras",
+              "is_from": true,
+              "imported_names": [
+                "execute_values"
+              ],
+              "file_path": "7c0a02a15fa8.py",
+              "line_number": 6
+            }
+          ]
+        },
+        {
+          "module": "redis",
+          "category": "common",
+          "occurrences": 1,
+          "file_count": 1,
+          "files": [
+            "1489683e8a6d.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "redis",
+              "is_from": false,
+              "imported_names": [
+                "redis"
+              ],
+              "file_path": "1489683e8a6d.py",
+              "line_number": 7
+            }
+          ]
+        },
+        {
+          "module": "pandas",
+          "category": "common",
+          "occurrences": 1,
+          "file_count": 1,
+          "files": [
+            "1489683e8a6d.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "pandas",
+              "is_from": false,
+              "imported_names": [
+                "pd"
+              ],
+              "file_path": "1489683e8a6d.py",
+              "line_number": 8
+            }
+          ]
+        },
+        {
+          "module": "snowflake",
+          "category": "unknown",
+          "occurrences": 1,
+          "file_count": 1,
+          "files": [
+            "2915a1788e0d.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "snowflake",
+              "is_from": true,
+              "imported_names": [
+                "connector"
+              ],
+              "file_path": "2915a1788e0d.py",
+              "line_number": 3
+            }
+          ]
+        }
+      ]
+    },
+    "dagster": {
+      "orchestrator": "dagster",
+      "summary": {
+        "total_files": 10,
+        "parseable_files": 10,
+        "failed_files": 0,
+        "unique_modules": 19
+      },
+      "modules_by_category": {
+        "orchestrator": [
+          {
+            "module": "dagster",
+            "category": "orchestrator",
+            "occurrences": 12,
+            "file_count": 10,
+            "files": [
+              "0394f15e305a.py",
+              "13e1069b04e4.py",
+              "2a6172360d95.py",
+              "7fec950fe2b6.py",
+              "d5c68fe8fb3c.py",
+              "d69ce2d9e900.py",
+              "e199ebedf0a1.py",
+              "e1d220452740.py",
+              "f7203fb2b91c.py",
+              "f8d395c87516.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "dagster",
+                "is_from": true,
+                "imported_names": [
+                  "op",
+                  "job",
+                  "Definitions",
+                  "daily_schedule",
+                  "In",
+                  "Out",
+                  "Any"
+                ],
+                "file_path": "0394f15e305a.py",
+                "line_number": 1
+              },
+              {
+                "module": "dagster",
+                "is_from": true,
+                "imported_names": [
+                  "op",
+                  "job",
+                  "RetryPolicy"
+                ],
+                "file_path": "13e1069b04e4.py",
+                "line_number": 2
+              },
+              {
+                "module": "dagster",
+                "is_from": true,
+                "imported_names": [
+                  "op",
+                  "job",
+                  "RetryPolicy",
+                  "ScheduleDefinition",
+                  "Definitions"
+                ],
+                "file_path": "2a6172360d95.py",
+                "line_number": 5
+              },
+              {
+                "module": "dagster",
+                "is_from": true,
+                "imported_names": [
+                  "execute_in_process"
+                ],
+                "file_path": "2a6172360d95.py",
+                "line_number": 123
+              },
+              {
+                "module": "dagster",
+                "is_from": true,
+                "imported_names": [
+                  "op",
+                  "job",
+                  "resource",
+                  "Failure",
+                  "EventMetadata",
+                  "OpExecutionContext",
+                  "DagsterEvent"
+                ],
+                "file_path": "7fec950fe2b6.py",
+                "line_number": 3
+              }
+            ]
+          }
+        ],
+        "stdlib": [
+          {
+            "module": "typing",
+            "category": "stdlib",
+            "occurrences": 6,
+            "file_count": 6,
+            "files": [
+              "0394f15e305a.py",
+              "2a6172360d95.py",
+              "d5c68fe8fb3c.py",
+              "d69ce2d9e900.py",
+              "e199ebedf0a1.py",
+              "f8d395c87516.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "typing",
+                "is_from": true,
+                "imported_names": [
+                  "List",
+                  "Tuple",
+                  "Dict"
+                ],
+                "file_path": "0394f15e305a.py",
+                "line_number": 2
+              },
+              {
+                "module": "typing",
+                "is_from": true,
+                "imported_names": [
+                  "Any"
+                ],
+                "file_path": "2a6172360d95.py",
+                "line_number": 4
+              },
+              {
+                "module": "typing",
+                "is_from": true,
+                "imported_names": [
+                  "Any"
+                ],
+                "file_path": "d5c68fe8fb3c.py",
+                "line_number": 5
+              },
+              {
+                "module": "typing",
+                "is_from": true,
+                "imported_names": [
+                  "List",
+                  "Dict",
+                  "Any"
+                ],
+                "file_path": "d69ce2d9e900.py",
+                "line_number": 6
+              },
+              {
+                "module": "typing",
+                "is_from": true,
+                "imported_names": [
+                  "Dict",
+                  "Any"
+                ],
+                "file_path": "e199ebedf0a1.py",
+                "line_number": 2
+              }
+            ]
+          },
+          {
+            "module": "os",
+            "category": "stdlib",
+            "occurrences": 5,
+            "file_count": 5,
+            "files": [
+              "2a6172360d95.py",
+              "d5c68fe8fb3c.py",
+              "d69ce2d9e900.py",
+              "e199ebedf0a1.py",
+              "e1d220452740.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "2a6172360d95.py",
+                "line_number": 6
+              },
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "d5c68fe8fb3c.py",
+                "line_number": 1
+              },
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "d69ce2d9e900.py",
+                "line_number": 1
+              },
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "e199ebedf0a1.py",
+                "line_number": 3
+              },
+              {
+                "module": "os",
+                "is_from": false,
+                "imported_names": [
+                  "os"
+                ],
+                "file_path": "e1d220452740.py",
+                "line_number": 2
+              }
+            ]
+          },
+          {
+            "module": "csv",
+            "category": "stdlib",
+            "occurrences": 3,
+            "file_count": 3,
+            "files": [
+              "0394f15e305a.py",
+              "d69ce2d9e900.py",
+              "f7203fb2b91c.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "csv",
+                "is_from": false,
+                "imported_names": [
+                  "csv"
+                ],
+                "file_path": "0394f15e305a.py",
+                "line_number": 3
+              },
+              {
+                "module": "csv",
+                "is_from": false,
+                "imported_names": [
+                  "csv"
+                ],
+                "file_path": "d69ce2d9e900.py",
+                "line_number": 5
+              },
+              {
+                "module": "csv",
+                "is_from": false,
+                "imported_names": [
+                  "csv"
+                ],
+                "file_path": "f7203fb2b91c.py",
+                "line_number": 1
+              }
+            ]
+          },
+          {
+            "module": "datetime",
+            "category": "stdlib",
+            "occurrences": 3,
+            "file_count": 3,
+            "files": [
+              "13e1069b04e4.py",
+              "e199ebedf0a1.py",
+              "e1d220452740.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "datetime",
+                "is_from": true,
+                "imported_names": [
+                  "date"
+                ],
+                "file_path": "13e1069b04e4.py",
+                "line_number": 1
+              },
+              {
+                "module": "datetime",
+                "is_from": true,
+                "imported_names": [
+                  "datetime",
+                  "timedelta"
+                ],
+                "file_path": "e199ebedf0a1.py",
+                "line_number": 4
+              },
+              {
+                "module": "datetime",
+                "is_from": true,
+                "imported_names": [
+                  "datetime"
+                ],
+                "file_path": "e1d220452740.py",
+                "line_number": 5
+              }
+            ]
+          },
+          {
+            "module": "time",
+            "category": "stdlib",
+            "occurrences": 2,
+            "file_count": 2,
+            "files": [
+              "2a6172360d95.py",
+              "d5c68fe8fb3c.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "time",
+                "is_from": false,
+                "imported_names": [
+                  "time"
+                ],
+                "file_path": "2a6172360d95.py",
+                "line_number": 1
+              },
+              {
+                "module": "time",
+                "is_from": false,
+                "imported_names": [
+                  "time"
+                ],
+                "file_path": "d5c68fe8fb3c.py",
+                "line_number": 2
+              }
+            ]
+          },
+          {
+            "module": "json",
+            "category": "stdlib",
+            "occurrences": 2,
+            "file_count": 2,
+            "files": [
+              "d69ce2d9e900.py",
+              "e1d220452740.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "json",
+                "is_from": false,
+                "imported_names": [
+                  "json"
+                ],
+                "file_path": "d69ce2d9e900.py",
+                "line_number": 2
+              },
+              {
+                "module": "json",
+                "is_from": false,
+                "imported_names": [
+                  "json"
+                ],
+                "file_path": "e1d220452740.py",
+                "line_number": 1
+              }
+            ]
+          },
+          {
+            "module": "logging",
+            "category": "stdlib",
+            "occurrences": 2,
+            "file_count": 2,
+            "files": [
+              "e1d220452740.py",
+              "f7203fb2b91c.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "logging",
+                "is_from": false,
+                "imported_names": [
+                  "logging"
+                ],
+                "file_path": "e1d220452740.py",
+                "line_number": 6
+              },
+              {
+                "module": "logging",
+                "is_from": false,
+                "imported_names": [
+                  "logging"
+                ],
+                "file_path": "f7203fb2b91c.py",
+                "line_number": 2
+              }
+            ]
+          },
+          {
+            "module": "io",
+            "category": "stdlib",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "0394f15e305a.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "io",
+                "is_from": false,
+                "imported_names": [
+                  "io"
+                ],
+                "file_path": "0394f15e305a.py",
+                "line_number": 4
+              }
+            ]
+          },
+          {
+            "module": "ftplib",
+            "category": "stdlib",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "d5c68fe8fb3c.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "ftplib",
+                "is_from": false,
+                "imported_names": [
+                  "ftplib"
+                ],
+                "file_path": "d5c68fe8fb3c.py",
+                "line_number": 4
+              }
+            ]
+          },
+          {
+            "module": "tempfile",
+            "category": "stdlib",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "d5c68fe8fb3c.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "tempfile",
+                "is_from": false,
+                "imported_names": [
+                  "tempfile"
+                ],
+                "file_path": "d5c68fe8fb3c.py",
+                "line_number": 6
+              }
+            ]
+          },
+          {
+            "module": "sqlite3",
+            "category": "stdlib",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "d5c68fe8fb3c.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "sqlite3",
+                "is_from": false,
+                "imported_names": [
+                  "sqlite3"
+                ],
+                "file_path": "d5c68fe8fb3c.py",
+                "line_number": 7
+              }
+            ]
+          },
+          {
+            "module": "subprocess",
+            "category": "stdlib",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "d69ce2d9e900.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "subprocess",
+                "is_from": false,
+                "imported_names": [
+                  "subprocess"
+                ],
+                "file_path": "d69ce2d9e900.py",
+                "line_number": 4
+              }
+            ]
+          }
+        ],
+        "common": [
+          {
+            "module": "requests",
+            "category": "common",
+            "occurrences": 5,
+            "file_count": 5,
+            "files": [
+              "2a6172360d95.py",
+              "7fec950fe2b6.py",
+              "d69ce2d9e900.py",
+              "e1d220452740.py",
+              "f8d395c87516.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "2a6172360d95.py",
+                "line_number": 3
+              },
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "7fec950fe2b6.py",
+                "line_number": 2
+              },
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "d69ce2d9e900.py",
+                "line_number": 3
+              },
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "e1d220452740.py",
+                "line_number": 3
+              },
+              {
+                "module": "requests",
+                "is_from": false,
+                "imported_names": [
+                  "requests"
+                ],
+                "file_path": "f8d395c87516.py",
+                "line_number": 1
+              }
+            ]
+          },
+          {
+            "module": "pandas",
+            "category": "common",
+            "occurrences": 3,
+            "file_count": 3,
+            "files": [
+              "2a6172360d95.py",
+              "d5c68fe8fb3c.py",
+              "d69ce2d9e900.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "pandas",
+                "is_from": false,
+                "imported_names": [
+                  "pd"
+                ],
+                "file_path": "2a6172360d95.py",
+                "line_number": 2
+              },
+              {
+                "module": "pandas",
+                "is_from": false,
+                "imported_names": [
+                  "pd"
+                ],
+                "file_path": "d5c68fe8fb3c.py",
+                "line_number": 3
+              },
+              {
+                "module": "pandas",
+                "is_from": false,
+                "imported_names": [
+                  "pd"
+                ],
+                "file_path": "d69ce2d9e900.py",
+                "line_number": 8
+              }
+            ]
+          },
+          {
+            "module": "psycopg2",
+            "category": "common",
+            "occurrences": 3,
+            "file_count": 3,
+            "files": [
+              "e199ebedf0a1.py",
+              "e1d220452740.py",
+              "f8d395c87516.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "psycopg2",
+                "is_from": false,
+                "imported_names": [
+                  "psycopg2"
+                ],
+                "file_path": "e199ebedf0a1.py",
+                "line_number": 5
+              },
+              {
+                "module": "psycopg2",
+                "is_from": false,
+                "imported_names": [
+                  "psycopg2"
+                ],
+                "file_path": "e1d220452740.py",
+                "line_number": 4
+              },
+              {
+                "module": "psycopg2",
+                "is_from": false,
+                "imported_names": [
+                  "psycopg2"
+                ],
+                "file_path": "f8d395c87516.py",
+                "line_number": 3
+              }
+            ]
+          },
+          {
+            "module": "psycopg2.extras",
+            "category": "common",
+            "occurrences": 2,
+            "file_count": 2,
+            "files": [
+              "e199ebedf0a1.py",
+              "f8d395c87516.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "psycopg2.extras",
+                "is_from": true,
+                "imported_names": [
+                  "RealDictCursor"
+                ],
+                "file_path": "e199ebedf0a1.py",
+                "line_number": 6
+              },
+              {
+                "module": "psycopg2.extras",
+                "is_from": true,
+                "imported_names": [
+                  "RealDictCursor"
+                ],
+                "file_path": "f8d395c87516.py",
+                "line_number": 4
+              }
+            ]
+          },
+          {
+            "module": "redis",
+            "category": "common",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "d69ce2d9e900.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "redis",
+                "is_from": false,
+                "imported_names": [
+                  "redis"
+                ],
+                "file_path": "d69ce2d9e900.py",
+                "line_number": 7
+              }
+            ]
+          }
+        ],
+        "unknown": [
+          {
+            "module": "snowflake.connector",
+            "category": "unknown",
+            "occurrences": 1,
+            "file_count": 1,
+            "files": [
+              "7fec950fe2b6.py"
+            ],
+            "sample_imports": [
+              {
+                "module": "snowflake.connector",
+                "is_from": false,
+                "imported_names": [
+                  "snowflake.connector"
+                ],
+                "file_path": "7fec950fe2b6.py",
+                "line_number": 1
+              }
+            ]
+          }
+        ]
+      },
+      "top_missing_dependencies": [
+        {
+          "module": "requests",
+          "category": "common",
+          "occurrences": 5,
+          "file_count": 5,
+          "files": [
+            "2a6172360d95.py",
+            "7fec950fe2b6.py",
+            "d69ce2d9e900.py",
+            "e1d220452740.py",
+            "f8d395c87516.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "2a6172360d95.py",
+              "line_number": 3
+            },
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "7fec950fe2b6.py",
+              "line_number": 2
+            },
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "d69ce2d9e900.py",
+              "line_number": 3
+            },
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "e1d220452740.py",
+              "line_number": 3
+            },
+            {
+              "module": "requests",
+              "is_from": false,
+              "imported_names": [
+                "requests"
+              ],
+              "file_path": "f8d395c87516.py",
+              "line_number": 1
+            }
+          ]
+        },
+        {
+          "module": "pandas",
+          "category": "common",
+          "occurrences": 3,
+          "file_count": 3,
+          "files": [
+            "2a6172360d95.py",
+            "d5c68fe8fb3c.py",
+            "d69ce2d9e900.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "pandas",
+              "is_from": false,
+              "imported_names": [
+                "pd"
+              ],
+              "file_path": "2a6172360d95.py",
+              "line_number": 2
+            },
+            {
+              "module": "pandas",
+              "is_from": false,
+              "imported_names": [
+                "pd"
+              ],
+              "file_path": "d5c68fe8fb3c.py",
+              "line_number": 3
+            },
+            {
+              "module": "pandas",
+              "is_from": false,
+              "imported_names": [
+                "pd"
+              ],
+              "file_path": "d69ce2d9e900.py",
+              "line_number": 8
+            }
+          ]
+        },
+        {
+          "module": "psycopg2",
+          "category": "common",
+          "occurrences": 3,
+          "file_count": 3,
+          "files": [
+            "e199ebedf0a1.py",
+            "e1d220452740.py",
+            "f8d395c87516.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "psycopg2",
+              "is_from": false,
+              "imported_names": [
+                "psycopg2"
+              ],
+              "file_path": "e199ebedf0a1.py",
+              "line_number": 5
+            },
+            {
+              "module": "psycopg2",
+              "is_from": false,
+              "imported_names": [
+                "psycopg2"
+              ],
+              "file_path": "e1d220452740.py",
+              "line_number": 4
+            },
+            {
+              "module": "psycopg2",
+              "is_from": false,
+              "imported_names": [
+                "psycopg2"
+              ],
+              "file_path": "f8d395c87516.py",
+              "line_number": 3
+            }
+          ]
+        },
+        {
+          "module": "psycopg2.extras",
+          "category": "common",
+          "occurrences": 2,
+          "file_count": 2,
+          "files": [
+            "e199ebedf0a1.py",
+            "f8d395c87516.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "psycopg2.extras",
+              "is_from": true,
+              "imported_names": [
+                "RealDictCursor"
+              ],
+              "file_path": "e199ebedf0a1.py",
+              "line_number": 6
+            },
+            {
+              "module": "psycopg2.extras",
+              "is_from": true,
+              "imported_names": [
+                "RealDictCursor"
+              ],
+              "file_path": "f8d395c87516.py",
+              "line_number": 4
+            }
+          ]
+        },
+        {
+          "module": "snowflake.connector",
+          "category": "unknown",
+          "occurrences": 1,
+          "file_count": 1,
+          "files": [
+            "7fec950fe2b6.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "snowflake.connector",
+              "is_from": false,
+              "imported_names": [
+                "snowflake.connector"
+              ],
+              "file_path": "7fec950fe2b6.py",
+              "line_number": 1
+            }
+          ]
+        },
+        {
+          "module": "redis",
+          "category": "common",
+          "occurrences": 1,
+          "file_count": 1,
+          "files": [
+            "d69ce2d9e900.py"
+          ],
+          "sample_imports": [
+            {
+              "module": "redis",
+              "is_from": false,
+              "imported_names": [
+                "redis"
+              ],
+              "file_path": "d69ce2d9e900.py",
+              "line_number": 7
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "installation_recommendations": {
+    "airflow": [
+      "requests  # used in 4 files (4 imports)",
+      "pandas  # used in 2 files (2 imports)",
+      "sqlalchemy  # used in 1 files (3 imports)",
+      "redis  # used in 1 files (1 imports)"
+    ],
+    "prefect": [
+      "requests  # used in 4 files (4 imports)",
+      "psycopg2  # used in 4 files (4 imports)",
+      "psycopg2  # used in 2 files (2 imports)",
+      "redis  # used in 1 files (1 imports)",
+      "pandas  # used in 1 files (1 imports)",
+      "snowflake  # used in 1 files (1 imports)"
+    ],
+    "dagster": [
+      "requests  # used in 5 files (5 imports)",
+      "pandas  # used in 3 files (3 imports)",
+      "psycopg2  # used in 3 files (3 imports)",
+      "psycopg2  # used in 2 files (2 imports)",
+      "snowflake  # used in 1 files (1 imports)",
+      "redis  # used in 1 files (1 imports)"
+    ]
+  }
+}

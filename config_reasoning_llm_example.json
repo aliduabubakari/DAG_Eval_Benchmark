@@ -1,0 +1,45 @@
+{
+    "model_settings": {
+      "active_provider": "deepinfra",
+      "deepinfra": {
+        "active_model": "DeepSeek_R1",
+        "models": {
+          "DeepSeek_R1": {
+            "model_name": "deepseek-ai/DeepSeek-R1",
+            "api_key": "",
+            "max_tokens": 16384,
+            "temperature": 0,
+            "base_url": "https://api.deepinfra.com/v1/openai"
+          },
+          "Kimi-K2-Thinking": {
+            "model_name": "moonshotai/Kimi-K2-Thinking",
+            "api_key": "",
+            "max_tokens": 16384,
+            "temperature": 0,
+            "base_url": "https://api.deepinfra.com/v1/openai"
+          },
+          "DeepSeek_R1_Turbo": {
+            "model_name": "deepseek-ai/DeepSeek-R1-Turbo",
+            "api_key": "",
+            "max_tokens": 16384,
+            "temperature": 0,
+            "base_url": "https://api.deepinfra.com/v1/openai"
+          },
+          "Qwen3-235B-A22B-Thinking-2507": {
+            "model_name": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+            "api_key": "",
+            "max_tokens": 16384,
+            "temperature": 0,
+            "base_url": "https://api.deepinfra.com/v1/openai"
+          },
+          "gemini-2.5-pro": {
+            "model_name": "google/gemini-2.5-pro",
+            "api_key": "",
+            "max_tokens": 16384,
+            "temperature": 0,
+            "base_url": "https://api.deepinfra.com/v1/openai"
+          }
+        }
+      }
+    }
+  }

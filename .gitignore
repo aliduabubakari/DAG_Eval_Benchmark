@@ -21,4 +21,6 @@ __pycache__/
 .vscode/
 .idea/
 
+mutation_benchmark/
+
 !config_*_example.json

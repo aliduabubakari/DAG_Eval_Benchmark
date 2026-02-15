@@ -1,0 +1,45 @@
+{
+    "model_settings": {
+      "active_provider": "deepinfra",
+      "deepinfra": {
+        "active_model": "Qwen3-Coder",
+        "models": {
+          "meta_llama": {
+            "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+            "api_key": "",
+            "max_tokens": 8000,
+            "temperature": 0.0,
+            "base_url": "https://api.deepinfra.com/v1/openai"
+          },
+          "Qwen3-Coder": {
+            "model_name": "Qwen/Qwen3-Coder-480B-A35B-Instruct-Turbo",
+            "api_key": "",
+            "max_tokens": 8000,
+            "temperature": 0.0,
+            "base_url": "https://api.deepinfra.com/v1/openai"
+          },
+          "llama4": {
+            "model_name": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+            "api_key": "",
+            "max_tokens": 8000,
+            "temperature": 0.0,
+            "base_url": "https://api.deepinfra.com/v1/openai"
+          },
+          "microsoft_phi": {
+            "model_name": "microsoft/phi-4",
+            "api_key": "",
+            "max_tokens": 8000,
+            "temperature": 0.0,
+            "base_url": "https://api.deepinfra.com/v1/openai"
+          },
+          "claude-4-sonnet": {
+            "model_name": "anthropic/claude-4-sonnet",
+            "api_key": "",
+            "max_tokens": 8000,
+            "temperature": 0.0,
+            "base_url": "https://api.deepinfra.com/v1/openai"
+          }
+        }
+      }
+    }
+  }
