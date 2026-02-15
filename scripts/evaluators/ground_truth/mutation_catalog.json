@@ -1,0 +1,174 @@
+{
+    "version": "v2",
+    "notes": "Objective mutation specs for GT1. Each mutation must introduce exactly one defect. Validators enforce it.",
+    "mutations": [
+      {
+        "id": "syntax_missing_colon",
+        "category": "syntax",
+        "severity": "critical",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Introduce a Python syntax error by removing a required colon (e.g., from a def/if/for/with/try).",
+        "validation": { "type": "syntax_invalid" }
+      },
+      {
+        "id": "syntax_unbalanced_paren",
+        "category": "syntax",
+        "severity": "critical",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Introduce a Python syntax error by adding an unmatched parenthesis.",
+        "validation": { "type": "syntax_invalid" }
+      },
+      {
+        "id": "syntax_unterminated_string",
+        "category": "syntax",
+        "severity": "critical",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Introduce a Python syntax error by creating an unterminated string literal.",
+        "validation": { "type": "syntax_invalid" }
+      },
+  
+      {
+        "id": "import_nonexistent_module",
+        "category": "import",
+        "severity": "critical",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Add an import of a guaranteed-nonexistent module using the provided NONEXISTENT_MODULE_NAME constant.",
+        "validation": { "type": "contains_token", "token_key": "NONEXISTENT_MODULE_NAME" }
+      },
+      {
+        "id": "import_nonexistent_from",
+        "category": "import",
+        "severity": "critical",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Add a from-import from the guaranteed-nonexistent module using NONEXISTENT_MODULE_NAME.",
+        "validation": { "type": "contains_token", "token_key": "NONEXISTENT_MODULE_NAME" }
+      },
+  
+      {
+        "id": "undefined_name_reference",
+        "category": "undefined",
+        "severity": "critical",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Insert a reference to an undefined variable using UNDEFINED_NAME (do NOT define it anywhere).",
+        "validation": { "type": "undefined_name_load", "token_key": "UNDEFINED_NAME" }
+      },
+  
+      {
+        "id": "unused_import_alias",
+        "category": "unused",
+        "severity": "minor",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Add an unused import alias using UNUSED_IMPORT_ALIAS (ensure it is not referenced elsewhere).",
+        "validation": { "type": "unused_import_alias_once", "token_key": "UNUSED_IMPORT_ALIAS" }
+      },
+      {
+        "id": "unused_variable_assignment",
+        "category": "unused",
+        "severity": "minor",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Add an unused variable assignment using UNUSED_VAR_NAME (ensure it is not referenced elsewhere).",
+        "validation": { "type": "unused_variable_once", "token_key": "UNUSED_VAR_NAME" }
+      },
+  
+      {
+        "id": "security_hardcoded_secret",
+        "category": "security",
+        "severity": "major",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Insert a realistic hardcoded secret assignment using HARDCODED_SECRET_VALUE (e.g., API_KEY = \"<value>\").",
+        "validation": { "type": "contains_token", "token_key": "HARDCODED_SECRET_VALUE" }
+      },
+      {
+        "id": "security_eval_call",
+        "category": "security",
+        "severity": "major",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Insert an eval(...) call (preferably in a function) using EVAL_SENTINEL inside the evaluated string.",
+        "validation": { "type": "ast_contains_eval", "token_key": "EVAL_SENTINEL" }
+      },
+      {
+        "id": "security_subprocess_shell_true",
+        "category": "security",
+        "severity": "major",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Insert a subprocess call with shell=True (preferably in a function) and include SHELL_SENTINEL in the command string.",
+        "validation": { "type": "ast_subprocess_shell_true", "token_key": "SHELL_SENTINEL" }
+      },
+  
+      {
+        "id": "error_handling_bare_except",
+        "category": "error_handling",
+        "severity": "minor",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Insert a bare except: handler (preferably in a function).",
+        "validation": { "type": "ast_bare_except" }
+      },
+      {
+        "id": "error_handling_swallow_exception",
+        "category": "error_handling",
+        "severity": "minor",
+        "orchestrators": ["airflow", "prefect", "dagster"],
+        "description": "Insert an except Exception: pass pattern that swallows errors (preferably in a function).",
+        "validation": { "type": "ast_swallow_exception" }
+      },
+
+      {
+        "id": "airflow_remove_dag_definition",
+        "category": "orchestrator_structure",
+        "severity": "critical",
+        "orchestrators": ["airflow"],
+        "description": "Remove or break the DAG definition so there is no DAG(...) context manager and no @dag decorator. IMPORTANT: the file must still import without NameError; do not leave dag=dag references unless you define dag at module level (e.g., dag = None).",
+        "validation": { "type": "airflow_no_dag_definition" }
+      },
+      {
+        "id": "airflow_remove_tasks",
+        "category": "orchestrator_structure",
+        "severity": "critical",
+        "orchestrators": ["airflow"],
+        "description": "Remove all task definitions so no Operator(...) calls and no @task decorators remain.",
+        "validation": { "type": "airflow_no_tasks" }
+      },
+      {
+        "id": "airflow_remove_dependencies",
+        "category": "orchestrator_structure",
+        "severity": "major",
+        "orchestrators": ["airflow"],
+        "description": "Remove all dependency wiring patterns (>>, <<, chain(...)). Only apply if original had dependencies.",
+        "validation": { "type": "airflow_no_dependencies" }
+      },
+      {
+        "id": "airflow_duplicate_task_id",
+        "category": "orchestrator_config",
+        "severity": "major",
+        "orchestrators": ["airflow"],
+        "description": "Create duplicate task_id values: ensure task_id=\"DUP_TASK_ID\" appears in at least two task definitions.",
+        "validation": { "type": "airflow_duplicate_task_id", "token_key": "DUP_TASK_ID" }
+      },
+  
+      {
+        "id": "prefect_remove_flow_decorator",
+        "category": "orchestrator_structure",
+        "severity": "critical",
+        "orchestrators": ["prefect"],
+        "description": "Remove @flow decorator so that no @flow remains in the file.",
+        "validation": { "type": "prefect_no_flow" }
+      },
+  
+      {
+        "id": "dagster_remove_job_and_assets",
+        "category": "orchestrator_structure",
+        "severity": "critical",
+        "orchestrators": ["dagster"],
+        "description": "Remove @job/@graph and @asset so that no job/graph/asset constructs remain.",
+        "validation": { "type": "dagster_no_job_or_asset" }
+      },
+      {
+        "id": "dagster_remove_ops_and_assets",
+        "category": "orchestrator_structure",
+        "severity": "critical",
+        "orchestrators": ["dagster"],
+        "description": "Remove @op and @asset so that no ops/assets remain (only apply if original had ops/assets).",
+        "validation": { "type": "dagster_no_op_or_asset" }
+      }
+    ]
+  }
