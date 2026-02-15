@@ -338,11 +338,3 @@ MIT License — see [LICENSE](LICENSE) for details.
 ## 🙏 Acknowledgments
 
 Built with inspiration from the LLM-as-a-judge research community and workflow orchestration tooling ecosystems.
-```
-
-This README is structured to be:
-- **Visually scannable** with clear section headers and emojis
-- **Comprehensive** covering all aspects of the project
-- **Actionable** with quick start and implementation guides
-- **Professional** with proper formatting and badges
-- **Research-focused** highlighting the scientific contribution
