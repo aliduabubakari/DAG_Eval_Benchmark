@@ -1,0 +1,24 @@
+# Virtual environments
+.venv/
+.venv-*/
+venv/
+env/
+
+# Generated outputs
+generated_output/
+benchmark_results/
+
+# Config files (LLM secrets / local settings)
+config_*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+!config_*_example.json
